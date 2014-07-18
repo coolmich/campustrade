@@ -1,0 +1,48 @@
+<div class='container'>
+  <div class="center-row">
+    <div class="container-fluid">
+      <div class="col-xs-offset-0 col-sm-offset-1 col-md-offset-1 col-lg-offset-2">
+        <div class="row header_above_form">
+          <div class="col-xs-0 col-sm-2 col-md-3 col-lg-2">
+          </div>
+          <div class="col-xs-12 col-sm-8 col-md-7 col-lg-6 tabBox" align="center">
+            <h2>Sell My Book</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-0 col-sm-2 col-md-3 col-lg-2 left_big_icon">
+            <img src="/assets/default.gif"/>
+          </div>
+          <div class="col-xs-12 col-sm-8 col-md-7 col-lg-6 tabBox" align="center">
+            <div class="content">
+              <div class="input_error_container">
+                <div class="input_error_notice"></div>
+              </div>
+              <% unless flash[:alert].nil? %>
+                <%= flash[:alert] %>
+                <%= form_for (@book), :class=> 'form-horizontal', id: 'sellForm' do |bp| %>
+                  <%= bp.text_field :title, :class=> 'form-control form_input_field', :placeholder=> 'Title', :id => 'sellForm_title' %>
+                  <%= bp.text_area :author, :class=> 'form-control form_input_field', :placeholder=> 'Author', :id => 'sellForm_title' %>
+                  <% if user_signed_in? %>
+                    <%= bp.submit 'Sell!', :class=> "btn btn-warning form_input_button", :id=>'signup_confirmButton' %>
+                  <% else %>
+                    <%= bp.submit 'Sell!', :class=> "btn btn-warning form_input_button", :id=>'signup_confirmButton' %>
+                  <% end %>
+                <% end %>
+              <% else %>
+              <%= form_for (@book), :class=> 'form-horizontal', id: 'sellForm' do |bp| %>
+                <%= bp.text_field :isbn, :class=> 'form-control form_input_field', :placeholder=> 'ISBN', :id => 'sellForm_isbn' %>
+                <% if user_signed_in? %>
+                  <%= bp.submit 'Sell!', :class=> "btn btn-warning form_input_button", :id=>'signup_confirmButton' %>
+                <% else %>
+                  <%= bp.submit 'Sell!', :class=> "btn btn-warning form_input_button", :id=>'signup_confirmButton' %>
+                <% end %>
+              <% end %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
