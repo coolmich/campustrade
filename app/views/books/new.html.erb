@@ -1,46 +1,34 @@
 <div class='container'>
   <div class="center-row">
     <div class="container-fluid">
-      <div class="col-xs-offset-0 col-sm-offset-1 col-md-offset-1 col-lg-offset-2">
-        <div class="row header_above_form">
-          <div class="col-xs-0 col-sm-2 col-md-3 col-lg-2">
-          </div>
-          <div class="col-xs-12 col-sm-8 col-md-7 col-lg-6 tabBox" align="center">
-            <h2>Sell My Book</h2>
+      <div class="tabBox" align="center">
+        <div class="progress book-progress animated bounceInDown">
+          <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">
+            50%
           </div>
         </div>
-        <div class="row">
-          <div class="col-xs-0 col-sm-2 col-md-3 col-lg-2 left_big_icon">
-            <img src="/assets/default.gif"/>
+        <h2 class="animated bounceInDown" style="margin: 50px auto;"> 1/2: What book is it? </h2>
+
+        <% unless flash[:alert].nil? %>
+          <div class="alert alert-warning alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <%= flash[:alert] %>
           </div>
-          <div class="col-xs-12 col-sm-8 col-md-7 col-lg-6 tabBox" align="center">
-            <div class="content">
-              <div class="input_error_container">
-                <div class="input_error_notice"></div>
-              </div>
-              <% unless flash[:alert].nil? %>
-                <%= flash[:alert] %>
-                <%= form_for (@book), :class=> 'form-horizontal', id: 'sellForm' do |bp| %>
-                  <%= bp.text_field :title, :class=> 'form-control form_input_field', :placeholder=> 'Title', :id => 'sellForm_title' %>
-                  <%= bp.text_area :author, :class=> 'form-control form_input_field', :placeholder=> 'Author', :id => 'sellForm_title' %>
-                  <% if user_signed_in? %>
-                    <%= bp.submit 'Sell!', :class=> "btn btn-warning form_input_button", :id=>'signup_confirmButton' %>
-                  <% else %>
-                    <%= bp.submit 'Sell!', :class=> "btn btn-warning form_input_button", :id=>'signup_confirmButton' %>
-                  <% end %>
-                <% end %>
-              <% else %>
-              <%= form_for (@book), :class=> 'form-horizontal', id: 'sellForm' do |bp| %>
-                <%= bp.text_field :isbn, :class=> 'form-control form_input_field', :placeholder=> 'ISBN', :id => 'sellForm_isbn' %>
-                <% if user_signed_in? %>
-                  <%= bp.submit 'Sell!', :class=> "btn btn-warning form_input_button", :id=>'signup_confirmButton' %>
-                <% else %>
-                  <%= bp.submit 'Sell!', :class=> "btn btn-warning form_input_button", :id=>'signup_confirmButton' %>
-                <% end %>
-              <% end %>
-              <% end %>
-            </div>
-          </div>
+        <% end %>
+
+        <div class="content animated bounceInUp">
+          <%= form_for @book, :class=>'form-horizontal', :id=> 'sellForm' do |f| %>
+            <% if flash[:alert].nil? %>
+              <%= f.text_field :isbn, :class=> 'form-control form_input_field', :placeholder=> 'ISBN', :id => 'sellForm_isbn' %>
+              <%= hidden_field_tag :save_mode, :auto %>
+            <% else %>
+              <%= f.text_field :title, :class=> 'form-control form_input_field', :placeholder=> 'Title', :id => 'sellForm_title' %>
+              <%= f.text_area :author, :class=> 'form-control form_input_field', :placeholder=> 'Author', :id => 'sellForm_title' %>
+              <%= hidden_field_tag :save_mode, :manual %>
+            <% end %>
+              <%= f.text_field :course, :class=>'form-control form_input_field', :placeholder=>'Course, e.g. MATH 20C', :id=>'sellForm_title'%>
+              <%= f.submit 'Next', :class=> "btn btn-warning form_input_button", :id=>'signup_confirmButton' %>
+          <% end %>
         </div>
       </div>
     </div>
