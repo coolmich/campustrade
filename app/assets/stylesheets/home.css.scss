@@ -2,3 +2,387 @@
   top: -25px;
   left:170px;
 }
+
+.feature {
+	background-size: cover;
+	position: relative;
+	min-height: 100%;
+	height: auto !important;
+	display: block;
+	border: 20px solid #fff;
+}
+
+.feature h1 {font-size: 6em; display: inline-block; line-height: 1em; text-transform: uppercase;}
+.feature h2 {
+	font-family: 'Petrona'; 
+	margin-top: 0;
+	font-size: 2em;
+	line-height: 1.2em;
+	animation-delay: 0.2s;
+	-moz-animation-delay: 0.2s;
+	-webkit-animation-delay: 0.2s;
+}
+
+.feature-copy {
+	margin-top: 150px;
+	text-align: center;
+	color: #fff;
+}
+
+.desc {
+	margin: 20px 0 -10px 0;
+}
+
+/* READ MORE BUTTON */
+
+.btn {
+	margin:30px 10px 0 10px;
+	background: #00d5af;
+	font-size: 1em;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	-webkit-border-radius: 30px;
+	border-radius: 30px;		
+	padding: 10px 20px;
+	overflow: hidden;
+	-webkit-transition: all 0.2s ease-in;
+	-moz-transition: all 0.2s ease-in;
+	-ms-transition: all 0.2s ease-in;
+	-o-transition: all 0.2s ease-in;
+	transition: all 0.2s ease-in;
+	animation-delay: 0.4s;
+	-moz-animation-delay: 0.4s;
+	-webkit-animation-delay: 0.4s;		
+}
+
+.btn:hover {
+	background: rgba(255,255,255,1);
+	color: #00d5af;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;	
+	-webkit-transition: all 0.2s ease-in;
+	-moz-transition: all 0.2s ease-in;
+	-ms-transition: all 0.2s ease-in;
+	-o-transition: all 0.2s ease-in;
+	transition: all 0.2s ease-in;	
+}
+
+.btn span {
+	font-size: 13px;
+	padding: 0 10px 0 7px;
+	-webkit-transition: all 0.2s ease-in;
+	-moz-transition: all 0.2s ease-in;
+	-ms-transition: all 0.2s ease-in;
+	-o-transition: all 0.2s ease-in;
+	transition: all 0.2s ease-in;		
+}
+
+.btn span.glyph-hover {
+	margin-left: -17px;
+	top: -30px;
+	-webkit-transition: all 0.2s ease-in;
+	-moz-transition: all 0.2s ease-in;
+	-ms-transition: all 0.2s ease-in;
+	-o-transition: all 0.2s ease-in;
+	transition: all 0.2s ease-in;		
+}
+
+.btn:hover span {
+	top:30px;
+	-webkit-transition: all 0.2s ease-in;
+	-moz-transition: all 0.2s ease-in;
+	-ms-transition: all 0.2s ease-in;
+	-o-transition: all 0.2s ease-in;
+	transition: all 0.2s ease-in;		
+}
+
+.btn:hover span.glyph-hover {
+	top:1px;
+	-webkit-transition: all 0.2s ease-in;
+	-moz-transition: all 0.2s ease-in;
+	-ms-transition: all 0.2s ease-in;
+	-o-transition: all 0.2s ease-in;
+	transition: all 0.2s ease-in;	
+}
+
+/* //////////////// */
+
+/* BUTTONS */
+a.btnTop {
+	background: #f5f5f5;
+	border: 1px solid #e5e5e5;
+	padding: 10px 16px 10px 8px;
+	position: fixed;
+	color: #666;
+	border-radius: 3px;	
+	bottom: 20px;
+	right: 20px;
+	display: none;
+	z-index: 1000;
+}	
+
+a.btnDefault {
+	background: #fff;
+	border: 1px solid #e5e5e5;
+	padding: 10px 16px 10px 8px;
+	color: #666;
+	margin-top: 20px;
+	padding: 10px 20px;
+}	
+
+/* ////////////////////*/
+
+a.scrolled {display: block;}
+
+a.btnTop:hover {
+	border: 1px solid #ededed;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	border-radius: 5px 5px 5px 5px;
+}
+
+.row {padding: 5px 0;}
+
+.image {position: relative;}
+
+.image span {
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	padding: 5px 10px;
+	font-size: 0.8em;
+	background: #000;
+	color: #fff;
+	margin: 0px;
+}
+
+.images {margin-top: 50px;}
+
+
+.txt-block {
+	padding: 20px;
+}
+
+h5 {font-weight: normal; font-size: 16px;}
+
+.thumbs {margin-top: 60px;}
+
+.thumb {
+	padding:0;
+	overflow: hidden;
+}
+
+.thumb img {
+	margin: 0;
+	padding: 0;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;			
+}
+
+.thumb span {
+	position: absolute;
+	display: block;
+	bottom: 20px;
+	left: 10px;
+	font-size: 40px;
+	text-transform: uppercase;
+	color: #fff;
+	padding: 0 20px;
+	-webkit-transition: all 0.1s ease-in;
+	-moz-transition: all 0.1s ease-in;
+	-ms-transition: all 0.1s ease-in;
+	-o-transition: all 0.1s ease-in;
+	transition: all 0.1s ease-in;		
+}
+
+.thumb a:hover img {		
+    -webkit-transform: scale(1.05,1.05);
+    -moz-transform:scale(1.05,1.05);
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease;			
+}
+
+.item-image {width: 25%;}
+
+.banner { position: relative; overflow: auto; }
+    .banner li { list-style: none; }
+        .banner ul li { float: left; }
+        .banner ul li img { height: 90%; width: auto; margin: 0 auto; }
+
+.copyright {padding-bottom: 30px; text-align: center; font-size: 14px; text-transform: uppercase; color: #ccc; font-family: Arial;}
+
+@media (max-width: 767px) {
+	.feature h1 {font-size: 2.2em; line-height: 1.2em;}
+	.feature h2 {font-size:1.5em; line-height: 1.1em;}
+	.feature-copy {margin-top: 110px;}
+	.feature {height: 450px; border: 0;}
+	.gallery {margin-top: 70px; margin-bottom: 50px;}
+	.gallery div a {font-size: 2.2em; line-height: 1.2em;}
+	.gallery div span {height: 6px; margin-left: 0; top: 17px; background: #00d5af;}
+	.gallery div a:hover {font-size: 2.2em;}
+	.gallery:hover + div#overlay {display: none;}
+	#overlay {border: 0;}
+	.navbar-brand {font-size: 35px; margin-left: -20px; padding: 10px 5px 5px 5px; color: #000; text-align: center; width: 50px;}
+	p {font-size: 1.4em;}
+	footer {margin: 0 0 30px 0;}
+	footer a {padding: 30px 0;}
+}
+
+@media (max-width: 992px) {
+	p {font-size: 1.2em;}
+	.txt-block {padding: 30px;}
+}
+
+@media (min-width: 992px) {
+	.feature {height: 650px;}
+	.feature-copy {margin-top: 150px;}
+	p {font-size: 24px;}
+	.start {padding: 60px 0;}
+}
+@charset "UTF-8";
+
+@font-face {
+  font-family: "alextalmon";
+  src:url("../fonts/alextalmon.eot");
+  src:url("../fonts/alextalmon.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/alextalmon.woff") format("woff"),
+    url("../fonts/alextalmon.ttf") format("truetype"),
+    url("../fonts/alextalmon.svg#alextalmon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'brandon_grotesquebold';
+    src: url('../fonts/brandon_bld-webfont.eot');
+    src: url('../fonts/brandon_bld-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/brandon_bld-webfont.woff') format('woff'),
+         url('../fonts/brandon_bld-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "alextalmon" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "alextalmon" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-fontawesome-webfont:before {
+  content: "a";
+}
+.icon-flickr:before {
+  content: "c";
+}
+.icon-google:before {
+  content: "d";
+}
+.icon-linkedin:before {
+  content: "e";
+}
+.icon-twitter-alt:before {
+  content: "f";
+}
+.icon-youtube-alt:before {
+  content: "g";
+}
+.icon-mobile-menu:before {
+  content: "h";
+}
+.icon-check:before {
+  content: "i";
+}
+.icon-facebook-1:before {
+  content: "o";
+}
+.icon-close:before {
+  content: "k";
+}
+.icon-fontawesome-webfont-1:before {
+  content: "l";
+}
+.icon-fontawesome-webfont-2:before {
+  content: "m";
+}
+.icon-fontawesome-webfont-3:before {
+  content: "y";
+}
+.icon-fontawesome-webfont-4:before {
+  content: "z";
+}
+.icon-fontawesome-webfont-5:before {
+  content: "A";
+}
+.icon-logo:before {
+  content: "b";
+}
+
+
+/*第三方code*/
+/*words moving down */
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+
+
+
+
+
+
+
+
+
+
