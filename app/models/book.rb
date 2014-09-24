@@ -12,15 +12,18 @@ class Book < ActiveRecord::Base
   def self.similar_search( word )
     if word.to_i == 0
       @books = Book.where(:course => word.delete(' ').downcase())
+
       if @books.empty?
         @books = Book.find_by_title( word )
         p "----------"
         p @books
       end
+
     else
       @books = Book.where( :isbn => word )
     end
-    # @books
+
+    @books
   end
 
   def self.find_by_title( title )
@@ -48,7 +51,7 @@ class Book < ActiveRecord::Base
 
   def self.convertISBN(isbn)
     # p "convertISBN called"
-    if isbn.length == 10
+    if isbn.length == 10 && isbn.to_i != 0
       isbn_13 = "978" + isbn.from(0).to(8) + ((10 - (9 + 3*7 + 8 + 3*(isbn.at(0).to_i) + isbn.at(1).to_i + 3*(isbn.at(2).to_i) + isbn.at(3).to_i + 3*(isbn.at(4).to_i) + isbn.at(5).to_i + 3*(isbn.at(6).to_i) + isbn.at(7).to_i + 3*(isbn.at(8).to_i)) % 10) % 10).to_s
     else
       isbn_13 = isbn
