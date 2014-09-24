@@ -42,12 +42,11 @@ class Book < ActiveRecord::Base
   end
 
   def self.processISBN(isbn, school_id)
-    # p "processISBN called"
     book = Book.where("isbn = ? and school_id = ?",isbn, school_id).first || Book.fetch_book(isbn, school_id)
   end
 
   def self.convertISBN(isbn)
-    # p "convertISBN called"
+    return isbn if isbn.to_i == 0
     if isbn.length == 10
       isbn_13 = "978" + isbn.from(0).to(8) + ((10 - (9 + 3*7 + 8 + 3*(isbn.at(0).to_i) + isbn.at(1).to_i + 3*(isbn.at(2).to_i) + isbn.at(3).to_i + 3*(isbn.at(4).to_i) + isbn.at(5).to_i + 3*(isbn.at(6).to_i) + isbn.at(7).to_i + 3*(isbn.at(8).to_i)) % 10) % 10).to_s
     else
@@ -57,7 +56,6 @@ class Book < ActiveRecord::Base
   end
 
   def self.fetch_book(isbn, school_id)
-    # p "fetch_book called"
     url = "https://www.googleapis.com/books/v1/volumes?q=isbn:#{isbn}"
     result = JSON.load(open(url).read) rescue nil
     if result && result["totalItems"] == 0
