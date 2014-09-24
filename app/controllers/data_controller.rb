@@ -45,4 +45,15 @@ class DataController < ApplicationController
     @month_linear = Datum.increToLinear(@month_incre, @season_linear[-2])
     @week_linear = Datum.increToLinear(@week_incre, @month_linear[-2])
   end
+
+  def user
+    range = 42
+    @arr = Array.new(range, 0)
+    User.all.each do |u|
+      interval = (Date.today - u.created_at.to_date).to_i
+      if interval < range
+        @arr[interval] += 1
+      end
+    end
+  end
 end

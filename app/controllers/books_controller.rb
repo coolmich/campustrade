@@ -3,6 +3,8 @@ class BooksController < ApplicationController
 
   def index
     params[:search] = Book.convertISBN(params[:search])
+    p "==========="
+    p params[:search]
     @books = Book.similar_search(params[:search])
 
     if @books.empty?
