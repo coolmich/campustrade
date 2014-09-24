@@ -1,0 +1,33 @@
+<script>
+  var dataset = <%= raw data.to_json %>;
+  var w = 1000;
+  var h = 800;
+  var padding = 20;
+  var dayTime = 1000 * 3600 * 24;
+  var maxCount = dataset[0][1];
+  var beautiFactor = 0.618;
+  var svg = d3.select(".word-inspector")
+    .append("svg")
+    .attr("width", w)
+    .attr("height", h);
+  
+  var bars = svg.selectAll("rect")
+               .data(dataset)
+               .enter()
+               .append("rect");
+  bars.attr("x", padding)
+      .attr("y", function(d, i){ return h/dataset.length * i; })
+      .attr("width", function(d){ return beautiFactor*w/(maxCount+1) * d[1];})
+      .attr("height", function(d){ return w/dataset.length - padding; })
+      .attr("fill", "teal");
+
+  var texts = svg.selectAll("text")
+                .data(dataset)
+                .enter()
+                .append("text");
+  texts.attr("x", function(d){ return beautiFactor*w/(maxCount+1) * d[1];})
+       .attr("y", function(d, i){ return h/dataset.length * i + padding; })
+       .text(function(d){ return d[1] + "      " + d[0];})
+       .style("word-spacing", padding/2)
+       .style("font-size", 18);
+</script>

@@ -45,4 +45,24 @@ class DataController < ApplicationController
     @month_linear = Datum.increToLinear(@month_incre, @season_linear[-2])
     @week_linear = Datum.increToLinear(@week_incre, @month_linear[-2])
   end
+
+  def user
+    range = 21
+    @arr = Array.new(range, 0)
+    User.all.each do |u|
+      interval = (Date.today - u.created_at.to_date).to_i
+      if interval < range
+        @arr[interval] += 1
+      end
+    end
+    @arr = @arr.reverse
+    @total = User.count
+  end
+
+  def word
+    @result = []
+    Datum.order("count desc").limit(50).each do |d|
+      @result << [d.original, d.count]
+    end
+  end
 end

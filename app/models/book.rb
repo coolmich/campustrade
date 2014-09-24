@@ -45,7 +45,6 @@ class Book < ActiveRecord::Base
   end
 
   def self.processISBN(isbn, school_id)
-    # p "processISBN called"
     book = Book.where("isbn = ? and school_id = ?",isbn, school_id).first || Book.fetch_book(isbn, school_id)
   end
 
@@ -60,7 +59,6 @@ class Book < ActiveRecord::Base
   end
 
   def self.fetch_book(isbn, school_id)
-    # p "fetch_book called"
     url = "https://www.googleapis.com/books/v1/volumes?q=isbn:#{isbn}"
     result = JSON.load(open(url).read) rescue nil
     if result && result["totalItems"] == 0

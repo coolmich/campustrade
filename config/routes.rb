@@ -22,6 +22,8 @@ Campustrade::Application.routes.draw do
   match '/video', to: 'home#video', via: 'get'
   
   get '/data' => 'data#index'
+  get '/data/user' => 'data#user'
+  get '/data/word' => 'data#word'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

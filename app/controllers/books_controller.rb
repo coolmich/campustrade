@@ -3,8 +3,8 @@ class BooksController < ApplicationController
 
   def index
     params[:search] = Book.convertISBN(params[:search])
+    Datum.processWord(params[:search])
     @books = Book.similar_search(params[:search])
-
     if @books.empty?
       flash[:alert] = 'No books found'
       redirect_to @school
