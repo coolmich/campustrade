@@ -20,7 +20,7 @@ class Book < ActiveRecord::Base
     else
       @books = Book.where( :isbn => word )
     end
-    # @books
+    @books
   end
 
   def self.find_by_title( title )

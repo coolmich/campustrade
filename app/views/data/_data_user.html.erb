@@ -1,9 +1,11 @@
 <script>
   var dataset = <%= data %>
   var w = 1000;
-  var h = 500;
+  var h = 400;
   var padding = 20;
   var heightScale = 10;
+  var paddingForDate = 8;
+  var dayTime = 1000 * 3600 * 24;
   var svg = d3.select(".user-inspector")
     .append("svg")
     .attr("width", w)
@@ -13,8 +15,41 @@
                 .enter()
                 .append("rect");
   bars.attr("x", function(d, i){ return w/dataset.length * i; })
-      .attr("y", function(d){ return h - d * heightScale; })
+      .attr("y", function(d){ return h - d * heightScale - paddingForDate; })
       .attr("width", function(d, i){ return w/dataset.length - padding; })
       .attr("height", function(d){ return d * heightScale; })
       .attr("fill", "teal");
+  var numbers = svg.selectAll("text")
+                   .data(dataset)
+                   .enter()
+                   .append("text");
+  numbers.attr("x", function(d, i){ return w/dataset.length * i + w/dataset.length/4; })
+         .attr("y", function(d){ return h - d * heightScale - 5 - paddingForDate; })
+         .text(function(d){return d;})
+         .attr("fill", "teal")
+         .attr("text-anchor", "middle");
+
+  var svg_time = d3.select(".time-scale")
+                  .append("svg")
+                  .attr("width", w)
+                  .attr("height", padding * 2);
+  var time_arr = [];
+  for (var i = 0; i < 21; i++) {
+    var newNumber = new Date(Date.now() - i * dayTime);
+    var date = [newNumber.getMonth() + 1, newNumber.getDate()]
+    time_arr.push(date.join("/"));
+  }
+  time_arr.reverse();
+  var time_text = svg_time.selectAll("text")
+                     .data(time_arr)
+                     .enter()
+                     .append("text");
+  time_text.attr("x", function(d, i){ return w/dataset.length * i + w/dataset.length/4; })
+           .attr("y", paddingForDate)
+           .text(function(d){return d;})
+           .attr("fill","#777")
+           .attr("transform", function(d, i){
+             var x = w/dataset.length * i + w/dataset.length/4;
+             return "rotate(30," + x + ","+ paddingForDate+")";
+           });
 </script>

@@ -1,4 +1,7 @@
-<div class="container">
+<div class="container" style="text-align:center; margin-top: 100px;">
+  <h1>Number of Newly Signed-up Users</h1>
+  <p style="position: relative; left: 400px;">Total: <%= @total%></p>
   <div class="user-inspector"></div>
-  <%= render 'data_user', :data => @arr%>
+  <div class="time-scale"></div>
+  <%= render 'data_user', :data => @arr, :total => @total %>
 </div>

@@ -16,4 +16,14 @@ class Datum < ActiveRecord::Base
     end
     result
   end
+
+  def self.processWord( search )
+    result = self.find_by(:compressed=>search.downcase.delete(" "))
+    if result.nil?
+      self.create(:original=>search, :compressed=>search.downcase.delete(" "))
+    else
+      result.count += 1
+      result.save
+    end
+  end
 end
