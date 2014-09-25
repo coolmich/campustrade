@@ -72,7 +72,7 @@
 
 @media (max-width: 548px) {
 	.car-logo {
-		width: 150px;
+		width: 200px;
 	}
 
 	.announcement {
@@ -83,36 +83,35 @@
 	}
 
 	.car-card {
-		width: 250px;
+		width: 330px;
 		margin: 0 auto 0 auto;
 		text-align: left;
-		box-shadow: 1px 2px 3px #aeaeae;
+		box-shadow: 2px 4px 5px #aeaeae;
 
 		.car-tag-block{
-			height: 150px;
+			height: 190px;
 		}
 
 		.car-title {
 			height: 20px;
 			background-color: #1ABC9C;
 			color: white;
-			font-size: 15px;
+			font-size: 16px;
 		}
 
 		.car-profile-photo {
-			width: 130px;
-			height: 130px;
+			width: 170px;
+			height: 170px;
 			float: left;
 		}
 
 		.general-info {
-			width: 119px;
+			width: 159px;
 			float: left;
 			h4 {
 				color: red;
 				font-size: 13px;
 				border: 1px solid red;
-				margin: 0;
 			}
 			ul {
 				list-style: none;
@@ -126,9 +125,9 @@
 		}
 
 		.car-detail {
-			width: 250px;
+			width: 330px;
 			.detail-info {
-				width: 250px;
+				width: 330px;
 				float: left;
 				h4 {
 					color: red;
@@ -141,7 +140,7 @@
 				}
 			}
 			img {
-				width: 250px;
+				width: 330px;
 			}
 		}	
 	}
