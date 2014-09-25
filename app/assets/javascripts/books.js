@@ -11,5 +11,4 @@ $(function(){
   }).on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
     $(this).removeClass('animated shake');
   });
-
 })

@@ -20,5 +20,8 @@ class HomeController < ApplicationController
 
   def tos
   end
+
+  def car
+  end
   
 end
