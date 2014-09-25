@@ -1,0 +1,147 @@
+.car-logo {
+	width: 200px;
+}
+
+.announcement {
+	h2, h3 {
+		color: #1ABC9C;
+		font-weight: bold;
+	}
+}
+
+.car-card {
+	width: 550px;
+	margin: 0 auto 0 auto;
+	text-align: left;
+	box-shadow: 2px 4px 10px #aeaeae;
+
+	.car-tag-block{
+		height: 200px;
+	}
+
+	.car-title {
+		height: 30px;
+		background-color: #1ABC9C;
+		color: white;
+		font-size: 20px;
+	}
+
+	.car-profile-photo {
+		height: 170px;
+		float: left;
+	}
+
+	.general-info {
+		width: 300px;
+		float: left;
+		h4 {
+			color: red;
+			border: 1px solid red;
+		}
+		ul {
+			list-style: none;
+			margin-left: 10px;
+			padding: 0;
+		}
+	}
+
+	.car-detail {
+		width: 550px;
+		.detail-info {
+			width: 540px;
+			float: left;
+			h4 {
+				color: red;
+				border: 1px solid red;
+			}
+			ul {
+				list-style: none;
+				margin-left: 10px;
+				padding: 0;
+			}
+		}
+		img {
+			width: 550px;
+		}
+	}	
+}
+
+
+
+
+
+@media (max-width: 548px) {
+	.car-logo {
+		width: 200px;
+	}
+
+	.announcement {
+		h2, h3 {
+			color: #1ABC9C;
+			font-weight: bold;
+		}
+	}
+
+	.car-card {
+		width: 330px;
+		margin: 0 auto 0 auto;
+		text-align: left;
+		box-shadow: 2px 4px 5px #aeaeae;
+
+		.car-tag-block{
+			height: 190px;
+		}
+
+		.car-title {
+			height: 20px;
+			background-color: #1ABC9C;
+			color: white;
+			font-size: 16px;
+		}
+
+		.car-profile-photo {
+			width: 170px;
+			height: 170px;
+			float: left;
+		}
+
+		.general-info {
+			width: 159px;
+			float: left;
+			h4 {
+				color: red;
+				font-size: 13px;
+				border: 1px solid red;
+			}
+			ul {
+				list-style: none;
+				margin-left: 2px;
+				padding: 0;
+
+				li {
+					font-size: 13px;
+				}
+			}
+		}
+
+		.car-detail {
+			width: 330px;
+			.detail-info {
+				width: 330px;
+				float: left;
+				h4 {
+					color: red;
+					border: 1px solid red;
+				}
+				ul {
+					list-style: none;
+					margin-left: 10px;
+					padding: 0;
+				}
+			}
+			img {
+				width: 330px;
+			}
+		}	
+	}
+}
