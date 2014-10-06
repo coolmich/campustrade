@@ -21,6 +21,7 @@ Campustrade::Application.routes.draw do
   match '/wechat', to: 'home#wechat', via: 'get'
   match '/video', to: 'home#video', via: 'get'
   match '/carsecrete', to: 'home#car', via: 'get'
+  match '/rent', to: 'home#rent', via: 'get'
   
   get '/data' => 'data#index'
   get '/data/user' => 'data#user'
