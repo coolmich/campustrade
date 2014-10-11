@@ -23,5 +23,8 @@ class HomeController < ApplicationController
 
   def car
   end
+
+  def rent
+  end
   
 end
