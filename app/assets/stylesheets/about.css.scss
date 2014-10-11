@@ -82,11 +82,29 @@
   border-color: transparent;
   cursor: pointer;
   padding-top: 30px;
+  margin-right: -2px;
 
   transition-duration: 0.5s;
 }
 
 .role-technical:hover {
+  border-color: rgba(46,204,113, 0.8);
+}
+
+.role-intern {
+  background-color: #95A5A6;
+  min-height: 200px;
+  border-width: 4px;
+  border-style: solid;
+  border-color: transparent;
+  cursor: pointer;
+  padding-top: 30px;
+  margin-right: 2px;
+
+  transition-duration: 0.5s;
+}
+
+.role-intern:hover {
   border-color: rgba(46,204,113, 0.8);
 }
 
