@@ -24,6 +24,7 @@ Campustrade::Application.routes.draw do
   get '/data' => 'data#index'
   get '/data/user' => 'data#user'
   get '/data/word' => 'data#word'
+  get '/rent', to: 'home#rent'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

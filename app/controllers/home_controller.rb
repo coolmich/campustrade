@@ -21,4 +21,6 @@ class HomeController < ApplicationController
   def tos
   end
   
+  def rent
+  end
 end

@@ -24,6 +24,19 @@ class BooksController < ApplicationController
     @book = Book.new
   end
 
+  def update
+    book = Book.find(params[:b][:id])
+    rents = Rentrecord.where(:user_id=>current_user.id, :book_id=>book.id)
+    if rents.empty?
+      Rentrecord.create(:user_id=>current_user.id, :book_id=>book.id)
+      book.update_attribute(:rent, book.rent - 1)
+      redirect_to rent_path
+    else
+      flash[:alert] = "You have rented this book"
+      redirect_to :back
+    end
+  end
+
   def create
     params[:book][:isbn] = Book.convertISBN(params[:book][:isbn])
 
