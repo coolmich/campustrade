@@ -10,5 +10,19 @@
     <% if (defined? prices) && (not prices.nil?) && (not prices.empty?) %>
     <span><%=image_tag("profile.png", :alt => "ICON", :class=>'icon') %> <%= pluralize(prices.count, " seller") %> | <%= image_tag("clock.png", :alt => "ICON", :class=>'icon') %> <%=time_ago_in_words(prices.order(:updated_at).first.updated_at) %> ago</span>
     <% end %>
+
+    <% if b.rent > 0 %>
+      <% if user_signed_in? %>
+        <%= form_for [@school,b], :method=>:put do |f| %>
+          <%= hidden_field_tag('b[id]', b.id)%>
+          <%= hidden_field_tag('b[rent]', b.rent) %>
+          <%= f.submit "Rent for Free", :class=>'btn btn-success rent'%>
+        <% end %>
+      <% else %>
+        <%= link_to new_user_session_path do%>
+          <button type="button" class="btn btn-success rent">Rent for Free</button>
+        <% end %>
+      <% end %>
+    <% end %>
   </div>
 </div>
