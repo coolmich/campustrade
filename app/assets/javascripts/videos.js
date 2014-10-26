@@ -65,7 +65,7 @@ $(function(){
     document.getElementById('below-desc').innerHTML = "This tutorial provides a detailed explanation for CSE 11 Quiz 2. The version is 2013 Fall on Rick's CSE 11 website. Please check the quiz pdf version online.";
     document.getElementById('below-summ').innerHTML = "1. 数学与逻辑运算的顺序。<br/>2. De Morgan's Law<br/>3. ＝＝ 和 equals() 的区别<br/>4. local variables. ";
     document.getElementById('video-intro-class-name').innerHTML = "CSE 11";
-    document.getElementById('video-intro-moorgee').innerHTML = "李斯";
+    document.getElementById('video-intro-moorgee').innerHTML = "李雪阳";
     document.getElementById('video-intro-moorgee').setAttribute("data-original-title", "");
   });
 });
