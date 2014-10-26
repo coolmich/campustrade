@@ -11,14 +11,6 @@ $(function(){
     document.getElementById('video-intro-class-name').innerHTML = "Class Name: Econ4, Principle of Accounting (Basic Introduction)";
     document.getElementById('video-intro-moorgee').innerHTML = "Moorgee: Alex (冬菇弟弟) ";
     document.getElementById('video-intro-moorgee').setAttribute("data-original-title", "如果在讲课当中大家发现冬菇弟弟有任何出错的地方，请大家毫不留情的指出来，我一定会在下面的准备中努力提高，为大家准备更有质量的辅助视频，谢谢大家。");
-    //document.getElementById('video-intro-moorgee').title = "Lorem ipsum"
-    // var inst = ABP.create( document.getElementById('load-player'), {
-    //   'src': 'http://static.cdn.moe/ccltestingvideos/otsukimi_recital.mp4',
-    //   'width': 600,
-    //   'height': 400
-    // });
-    // CommentLoader('assets/otsukimi.xml', inst.cmManager);
-    
   });
   $('#econ42button').on('click', function(){
     $('li').removeClass('active-li');
@@ -33,13 +25,6 @@ $(function(){
     document.getElementById('video-intro-class-name').innerHTML = "Class Name: Econ4, Principle of Accounting (Basic Introduction)";
     document.getElementById('video-intro-moorgee').innerHTML = "Moorgee: Alex (冬菇弟弟) ";
     document.getElementById('video-intro-moorgee').setAttribute("data-original-title", "如果在讲课当中大家发现冬菇弟弟有任何出错的地方，请大家毫不留情的指出来，我一定会在下面的准备中努力提高，为大家准备更有质量的辅助视频，谢谢大家。");
-    // var inst = ABP.create( document.getElementById('load-player'), {
-    //   'src': 'http://static.cdn.moe/ccltestingvideos/otsukimi_recital.mp4',
-    //   'width': 600,
-    //   'height': 400
-    // });
-    // CommentLoader('assets/otsukimi.xml', inst.cmManager);
-    
   });
   $('#econ11button').on('click', function(){
     $('li').removeClass('active-li');
@@ -54,13 +39,34 @@ $(function(){
     document.getElementById('video-intro-class-name').innerHTML = "Class Name: Econ1, Principle of Microeconomics";
     document.getElementById('video-intro-moorgee').innerHTML = "讲师：慕秉晨";
     document.getElementById('video-intro-moorgee').setAttribute("data-original-title", "");
-    // var inst = ABP.create( document.getElementById('load-player'), {
-    //   'src': 'http://static.cdn.moe/ccltestingvideos/otsukimi_recital.mp4',
-    //   'width': 600,
-    //   'height': 400
-    // });
-    // CommentLoader('assets/otsukimi.xml', inst.cmManager);
-    
+  });
+  $('#econ31button').on('click', function(){
+    $('li').removeClass('active-li');
+    $(this).parent().addClass('active-li');
+    document.getElementById('youtube-video').innerHTML = '<iframe width="640" height="360" src="//www.youtube.com/embed/hXkPxT7y5pI" frameborder="0" allowfullscreen></iframe>';
+    $('.video-intro-container').show();
+    $('.course-desc').show();
+
+    document.getElementById('below-title').innerHTML = "Econ3 Midterm1 讲解";
+    document.getElementById('below-desc').innerHTML = "Midterm1 is coming --- and this video is for you to prepare.";
+    document.getElementById('below-summ').innerHTML = "Chapter 15: GDP<br/>Chapter 16: Inflation<br/>Chapter 17: Wages and Unemployment";
+    document.getElementById('video-intro-class-name').innerHTML = "Class Name: Econ3, Principle of Macroeconomics";
+    document.getElementById('video-intro-moorgee').innerHTML = "讲师：Kiki";
+    document.getElementById('video-intro-moorgee').setAttribute("data-original-title", "");
+  });
+  $('#cse111button').on('click', function(){
+    $('li').removeClass('active-li');
+    $(this).parent().addClass('active-li');
+    document.getElementById('youtube-video').innerHTML = '<iframe width="640" height="360" src="//www.youtube.com/embed/epsPY5FWq7s" frameborder="0" allowfullscreen></iframe>';
+    $('.video-intro-container').show();
+    $('.course-desc').show();
+
+    document.getElementById('below-title').innerHTML = "CSE 11 Quiz2 讲解";
+    document.getElementById('below-desc').innerHTML = "This tutorial provides a detailed explanation for CSE 11 Quiz 2. The version is 2013 Fall on Rick's CSE 11 website. Please check the quiz pdf version online.";
+    document.getElementById('below-summ').innerHTML = "1. 数学与逻辑运算的顺序。<br/>2. De Morgan's Law<br/>3. ＝＝ 和 equals() 的区别<br/>4. local variables. ";
+    document.getElementById('video-intro-class-name').innerHTML = "CSE 11";
+    document.getElementById('video-intro-moorgee').innerHTML = "李斯";
+    document.getElementById('video-intro-moorgee').setAttribute("data-original-title", "");
   });
 });
 
