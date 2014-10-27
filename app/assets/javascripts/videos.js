@@ -68,6 +68,35 @@ $(function(){
     document.getElementById('video-intro-moorgee').innerHTML = "李斯";
     document.getElementById('video-intro-moorgee').setAttribute("data-original-title", "");
   });
+  // $('#math20abutton').on('click', function(){
+  //   $('li').removeClass('active-li');
+  //   $(this).parent().addClass('active-li');
+  //   document.getElementById('youtube-video').innerHTML = '';
+  //   $('.video-intro-container').show();
+  //   $('.course-desc').show();
+
+  //   document.getElementById('below-title').innerHTML = "Math 20A Midterm 讲解";
+  //   document.getElementById('below-desc').innerHTML = "Math 20A  Midterm review";
+  //   document.getElementById('below-summ').innerHTML = "本节内容：<br/>2.1-2.7 . 3.1-3.3<br/>  1.什么是limits<br/>2.各种limits  <br/>  3.3.如何求各种limits（独家解题经验）<br/>  4. 什么是导数(Derivative)<br/>5.如何求导(differentiate)<br/>";
+  //   document.getElementById('video-intro-class-name').innerHTML = "CSE 11";
+  //   document.getElementById('video-intro-moorgee').innerHTML = "张子桐";
+  //   document.getElementById('video-intro-moorgee').setAttribute("data-original-title", "");
+  // });
+  $('#math20cbutton').on('click', function(){
+    $('li').removeClass('active-li');
+    $(this).parent().addClass('active-li');
+    document.getElementById('youtube-video').innerHTML = '<iframe width="640" height="360" src="//www.youtube.com/embed/dty79hypXK0" frameborder="0" allowfullscreen></iframe>';
+    $('.video-intro-container').show();
+    $('.course-desc').show();
+
+    document.getElementById('below-title').innerHTML = "Math 20C Midterm1 讲解";
+    document.getElementById('below-desc').innerHTML = "Example questions for the first midterm";
+    document.getElementById('below-summ').innerHTML = "本节内容:<br/>  1.chapter12.2-12.5<br/>  2.chapter13.1&13.2<br/>";
+    document.getElementById('video-intro-class-name').innerHTML = "Math 20C";
+    document.getElementById('video-intro-moorgee').innerHTML = "朱嘉晟";
+    document.getElementById('video-intro-moorgee').setAttribute("data-original-title", "");
+  });
+
 });
 
 
