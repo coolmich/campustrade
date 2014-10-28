@@ -68,20 +68,20 @@ $(function(){
     document.getElementById('video-intro-moorgee').innerHTML = "李雪阳";
     document.getElementById('video-intro-moorgee').setAttribute("data-original-title", "");
   });
-  // $('#math20abutton').on('click', function(){
-  //   $('li').removeClass('active-li');
-  //   $(this).parent().addClass('active-li');
-  //   document.getElementById('youtube-video').innerHTML = '';
-  //   $('.video-intro-container').show();
-  //   $('.course-desc').show();
+  $('#math20abutton').on('click', function(){
+    $('li').removeClass('active-li');
+    $(this).parent().addClass('active-li');
+    document.getElementById('youtube-video').innerHTML = '<iframe width="640" height="360" src="//www.youtube.com/embed/OF9uxZjmq8Y" frameborder="0" allowfullscreen></iframe>';
+    $('.video-intro-container').show();
+    $('.course-desc').show();
 
-  //   document.getElementById('below-title').innerHTML = "Math 20A Midterm 讲解";
-  //   document.getElementById('below-desc').innerHTML = "Math 20A  Midterm review";
-  //   document.getElementById('below-summ').innerHTML = "本节内容：<br/>2.1-2.7 . 3.1-3.3<br/>  1.什么是limits<br/>2.各种limits  <br/>  3.3.如何求各种limits（独家解题经验）<br/>  4. 什么是导数(Derivative)<br/>5.如何求导(differentiate)<br/>";
-  //   document.getElementById('video-intro-class-name').innerHTML = "CSE 11";
-  //   document.getElementById('video-intro-moorgee').innerHTML = "张子桐";
-  //   document.getElementById('video-intro-moorgee').setAttribute("data-original-title", "");
-  // });
+    document.getElementById('below-title').innerHTML = "Math 20A Midterm 讲解";
+    document.getElementById('below-desc').innerHTML = "Math 20A  Midterm review";
+    document.getElementById('below-summ').innerHTML = "本节内容：<br/>2.1-2.7 . 3.1-3.3<br/>  1.什么是limits<br/>2.各种limits  <br/>  3.3.如何求各种limits（独家解题经验）<br/>  4. 什么是导数(Derivative)<br/>5.如何求导(differentiate)<br/>";
+    document.getElementById('video-intro-class-name').innerHTML = "Math 20A";
+    document.getElementById('video-intro-moorgee').innerHTML = "张子桐";
+    document.getElementById('video-intro-moorgee').setAttribute("data-original-title", "");
+  });
   $('#math20cbutton').on('click', function(){
     $('li').removeClass('active-li');
     $(this).parent().addClass('active-li');
@@ -96,6 +96,20 @@ $(function(){
     document.getElementById('video-intro-moorgee').innerHTML = "朱嘉晟";
     document.getElementById('video-intro-moorgee').setAttribute("data-original-title", "");
   });
+  // $('#math20ebutton').on('click', function(){
+  //   $('li').removeClass('active-li');
+  //   $(this).parent().addClass('active-li');
+  //   document.getElementById('youtube-video').innerHTML = '<iframe width="640" height="360" src="//www.youtube.com/embed/WPJ3BACtlwA" frameborder="0" allowfullscreen></iframe>';
+  //   $('.video-intro-container').show();
+  //   $('.course-desc').show();
+
+  //   document.getElementById('below-title').innerHTML = "";
+  //   document.getElementById('below-desc').innerHTML = "";
+  //   document.getElementById('below-summ').innerHTML = "";
+  //   document.getElementById('video-intro-class-name').innerHTML = "Math 20E Vector Calculus";
+  //   document.getElementById('video-intro-moorgee').innerHTML = "阮正旸";
+  //   document.getElementById('video-intro-moorgee').setAttribute("data-original-title", "");
+  // });
 
 });
 
