@@ -96,20 +96,20 @@ $(function(){
     document.getElementById('video-intro-moorgee').innerHTML = "朱嘉晟";
     document.getElementById('video-intro-moorgee').setAttribute("data-original-title", "");
   });
-  // $('#math20ebutton').on('click', function(){
-  //   $('li').removeClass('active-li');
-  //   $(this).parent().addClass('active-li');
-  //   document.getElementById('youtube-video').innerHTML = '<iframe width="640" height="360" src="//www.youtube.com/embed/WPJ3BACtlwA" frameborder="0" allowfullscreen></iframe>';
-  //   $('.video-intro-container').show();
-  //   $('.course-desc').show();
+  $('#math20ebutton').on('click', function(){
+    $('li').removeClass('active-li');
+    $(this).parent().addClass('active-li');
+    document.getElementById('youtube-video').innerHTML = '<iframe width="640" height="360" src="//www.youtube.com/embed/WPJ3BACtlwA" frameborder="0" allowfullscreen></iframe>';
+    $('.video-intro-container').show();
+    $('.course-desc').show();
 
-  //   document.getElementById('below-title').innerHTML = "";
-  //   document.getElementById('below-desc').innerHTML = "";
-  //   document.getElementById('below-summ').innerHTML = "";
-  //   document.getElementById('video-intro-class-name').innerHTML = "Math 20E Vector Calculus";
-  //   document.getElementById('video-intro-moorgee').innerHTML = "阮正旸";
-  //   document.getElementById('video-intro-moorgee').setAttribute("data-original-title", "");
-  // });
+    document.getElementById('below-title').innerHTML = "Math 20E Video 1";
+    document.getElementById('below-desc').innerHTML = "Meanings of equations with Examples.";
+    document.getElementById('below-summ').innerHTML = "本节内容:<br/>  1.  Approximation Method & Taylor’s Theorem<br/>  2.  Chain Rule<br/>  3.  Change of Variables<br/>  4.  Techniques of Integration";
+    document.getElementById('video-intro-class-name').innerHTML = "Math 20E Vector Calculus";
+    document.getElementById('video-intro-moorgee').innerHTML = "阮正旸";
+    document.getElementById('video-intro-moorgee').setAttribute("data-original-title", "");
+  });
 
 });
 
