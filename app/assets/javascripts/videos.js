@@ -110,6 +110,20 @@ $(function(){
     document.getElementById('video-intro-moorgee').innerHTML = "阮正旸";
     document.getElementById('video-intro-moorgee').setAttribute("data-original-title", "");
   });
+  $('#econ43button').on('click', function(){
+    $('li').removeClass('active-li');
+    $(this).parent().addClass('active-li');
+    document.getElementById('youtube-video').innerHTML = '<iframe width="480" height="360" src="//www.youtube.com/embed/A0ItfXsTi9g" frameborder="0" allowfullscreen></iframe>';
+    $('.video-intro-container').show();
+    $('.course-desc').show();
+
+    document.getElementById('below-title').innerHTML = "Econ 4 Mid Term Review";
+    document.getElementById('below-desc').innerHTML = "Econ 4 Mid Term Review";
+    document.getElementById('below-summ').innerHTML = "本节内容:<br/>  1.  Financial Market <br/>  2.  How to mark your reader? The basic Technique you need to get an A on the Midterm<br/>  3.  Accounting Principle/ Key-point in each chapter<br/>  4.  Know how to do the T-account/ Journalize Debit/credit/ Income Statement/ Balance sheet/ Statement of Cash flow<br/>  5. FIFO=LISH/ LIFO=FISH<br/>  6. Review ECON4 VIDEO 1 AND 2 if you do not understand how to do T account, Debit or Credit since this video only helps you to review not to learn.";
+    document.getElementById('video-intro-class-name').innerHTML = "Econ4 Principle of Accounting";
+    document.getElementById('video-intro-moorgee').innerHTML = "Alex (冬菇弟弟) ";
+    document.getElementById('video-intro-moorgee').setAttribute("data-original-title", "");
+  });
 
 });
 
