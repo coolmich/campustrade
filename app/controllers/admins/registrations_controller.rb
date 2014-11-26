@@ -5,7 +5,7 @@ class Admins::RegistrationsController < Devise::RegistrationsController
   end
 
   def create
-    devise_parameter_sanitizer.for(:sign_up) << :name
+    devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:name, :phone, :email, :password, :password_confirmation) }
     super
     #Bookprice.find(cookies.signed[:tempPrice]).update_attribute(:user_id, current_user.id) unless cookies.signed[:tempPrice].nil?
     # if not cookies.signed[:tempPrice].nil?
@@ -14,7 +14,7 @@ class Admins::RegistrationsController < Devise::RegistrationsController
       # flash[:success] = "Success! Your offer is saved! #{view_context.link_to('VIEW', school_book_path(@school.name, bookprice.book))}"
       # cookies.signed[:tempPrice] = nil
     # end
-    flash[:success] = "Welcome to Moorgoo! Please check your mailbox to verify your account!"
+    flash[:success] = "Welcome to Moorgoo!"
   end
 
   def cancel
